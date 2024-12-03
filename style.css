@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+		*{
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+			font-family: "Poppins", sans-serif;
+		}
+
+		html {
+			scroll-behavior: smooth;
+		}
+		header{
+			width: 100%;
+			height: 80px;
+			background-color: #fefefe;
+			display: flex;
+			justify-content: space-between	;
+			align-items: center;
+			box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.5);
+			padding: 0 100px;
+			position: fixed;
+		}
+
+		.logo{
+			font-size: 2.5rem;
+			cursor: pointer;
+		}
+
+		.logoName{
+			color: red;
+
+		}
+
+		.logoName:hover{
+			color: black;
+			transition: 0.4s ease;
+		}
+
+		.logo .tagLogo:hover{
+			color: red;
+			transition: 0.2s ease-in;
+		}
+
+		.hamburger{
+			font-size: 1.5rem;
+			display: none;
+		}
+
+		nav ul{
+			display: flex;
+		}
+
+		nav ul li{
+			list-style: none;
+			margin: 0 10px;
+			
+		}
+
+		nav ul li a{
+			text-decoration: none;
+			color: black;
+			display: block;
+			font-size: 15px;
+			text-transform: uppercase;
+			font-weight: 600;
+			transition: 0.2s;
+		}
+
+		
+		.container{
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			height: 100vh;
+			padding-top: 50px;
+		}
+		
+		.container .left-side{
+			width: 100%;
+			animation: left-side 2s ease-in-out;
+		}
+
+		.container .left-side .image{
+			text-align: center;
+		}
+
+		.container .left-side img{
+			width: 400px;
+			/* max-width: 350px; */
+			height: 400px;
+			border-radius: 50%;
+			background-color: black;
+			box-shadow: 0 5px 5px 5px rgba(13, 110, 253, 0.2);
+			animation: blob 5s ease-in-out infinite;
+			transition: all 1s ease-in-out;
+		}
+
+		@keyframes blob{
+			0%{
+				border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+			}
+
+			50%{
+				border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+			}
+		}
+
+		.container .right-side{
+			width: 100%;
+			padding: 10px 20px;
+			animation: right-side 2s ease-in-out;
+		}
+
+		.container .right-side .name{
+			font-size: 3.5rem;
+			margin-bottom: 10px;
+		}
+
+		.container .right-side .title{
+			font-size: 1.5rem;
+			margin-bottom: 10px;
+		}
+
+		.container .right-side .description{
+			margin: 10px 0;
+			padding-right: 30px;
+		}
+
+		.right-side .socials{
+			font-size: 2.5rem;
+			margin:10px
+		} 
+
+		.socials a{
+			text-decoration: none;
+			color: black;
+		}
+
+		.right-side .tech-icon{
+			font-size: 2.5rem;
+		}
+
+		@keyframes left-side {
+			from{
+				opacity: 0;
+				transform: translateX(-100%);
+			}
+			to{
+				opacity: 1;
+				transform: translateX(0);
+			}
+		}
+
+		@keyframes right-side {
+			from{
+				opacity: 0;
+				transform: translateY(100%);
+			}
+			to{
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+
+
+		.about-me{
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			height: 100vh;
+			padding-top: 50px;
+		}
+
+		.about-me .aboutMe-left{
+			width: 100%;
+			padding: 25px 100px;
+		}
+
+		.aboutMe-left h1{
+			text-transform: uppercase;
+			font-size: 17px;
+			color: red;
+			margin: 10px 0;
+		}
+
+		.aboutMe-left h2{
+			font-size: 2rem;
+		}
+
+		.aboutMe-left p{
+			font-size: 17px;
+			margin: 30px 0;
+		}
+
+		.aboutMe-left a{
+			text-decoration: none;
+			color: white;
+			padding: 10px 20px;
+			background-color: black;
+			border-radius: 20px;
+			text-transform: uppercase;
+		}
+
+		.about-me .aboutMe-right{
+			width: 100%;
+			text-align: center;
+		}
+
+		.aboutMe-right img{
+			border-radius: 30px 60px 40px 80px;
+			border: 1px solid black;
+			margin-right: 100px;
+			width: 400px;
+			height: 400px;
+		}
+
+		@media only screen and (max-width:600px) {
+			.hamburger{
+				display: block;
+				cursor: pointer;
+			
+			}
+			.nav-bar{
+				height: 0;
+				position: absolute;
+				top: 80px;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				width: 100%;
+				transition: 0.5s ease-in;
+				overflow: hidden;
+				background-color: #fefefe;
+			}
+
+				.nav-bar ul{
+				display: block;
+				
+			}
+
+			.nav-bar ul li a{
+				margin: 30px 20px;
+				padding: 20px;
+				opacity: 1;
+
+			}
+
+			.nav-bar ul li a:hover{
+				background-color: whitesmoke;
+			}
+
+			header{
+				padding: 0 30px;
+			}
+
+			.logo{
+				font-size: 2rem;
+			}
+
+		.show{
+				height: 450px;
+				
+			}
+
+			.right-side .tech-icon{
+				font-size: 2rem;
+			}
+
+			.right-side .socials{
+				font-size: 2rem;
+				margin:10px
+			} 
+		
+
+			.container .right-side .name{
+				font-size: 2.5rem;
+				
+			}
+
+			.container .right-side .title{
+				font-size: 1.5rem;
+			}
+
+			.container .right-side .description{
+				font-size: 1rem;
+				text-align: center;
+			}
+
+			.right-side .socials{
+				font-size: 2rem;
+			} 
+
+			.right-side .tech-icon{
+				font-size: 2rem;
+			} 
+
+		
+			.container .left-side img{
+				width: 350px;
+				/* max-width: 350px; */
+				height: 350px;
+				border-radius: 50%;
+				background-color: black;
+				background-size: contain;
+			}
+
+		}
+
+		@media only screen and (max-width:800px){
+			.container{
+				display: block;
+			}
+
+			.container .right-side{
+				text-align: center;
+			}
+
+			.container .left-side{
+				padding-top: 100px;
+			}
+		}
